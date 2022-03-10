@@ -5,14 +5,14 @@ services:
     image: postgres
     ports:
       - '5432:5432'
-    container_name: redeamai
+    container_name: streaming
     restart: always
     volumes:
-      -comercio-disk:/var/lib/postgresql/data
+      - postgres-disk:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: amai
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 711179
-      POSTGRES_DB: amai
+      POSTGRES_DB: postgres
 
 volumes:
-  redeamai-disk:
+  postgres-disk:
